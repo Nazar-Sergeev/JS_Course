@@ -110,37 +110,81 @@
 // console.log(123 === '123'); //-> false
 // console.log(123 == '123') //-> true
 
-
 // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
 //
 //     let str = "20";
 //     let a = 5;
-//     document.write(str + a + "<br/>");
-//     document.write(str - a + "<br/>");
-//     document.write(str * "2" + "<br/>");
-//     document.write(str / 2 + "<br/>");
-
-
+//     document.write(str + a + "<br/>"); //- "а" преобразовалась в строку (бинарный плюс) приводит переменные к строкам
+//     document.write(str - a + "<br/>"); //- "str" преобразовалась в число, т.к. все операторы кроме бинароного плюса преобразовывают все переменные в числа
+//     document.write(str * "2" + "<br/>");//- "str" преобразовалась в число, т.к. все операторы кроме бинароного плюса преобразовывают все переменные в числа
+//     document.write(str / 2 + "<br/>");//- "str" преобразовалась в число, т.к. все операторы кроме бинароного плюса преобразовывают все переменные в числа
 
 // 1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
-
-let numbers = [1, 3, 7, 4, 8, 9, 2, 12, 15, 17];
-
-let result = numbers[0] + numbers[1] +  numbers[2] +  numbers[4] +  numbers[4] +  numbers[5] +  numbers[6] +  numbers[7] +  numbers[8] +  numbers[9];
-console.log(result);
+//
+// let numbers = [1, 3, 7, 4, 8, 9, 2, 12, 15, 17];
+//
+// let result = numbers[0] + numbers[1] +  numbers[2] +  numbers[4] +  numbers[4] +  numbers[5] +  numbers[6] +  numbers[7] +  numbers[8] +  numbers[9];
+// console.log(result);
 
 // 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
-
-let book = {
-    name: 'Harry Potter',
-    number: 245,
-    genre: 'fantastic'
-}
+//
+// let book1 = {
+//     name: 'Harry Potter',
+//     number: 245,
+//     genre: 'fantastic'
+// }
+// console.log(book1);
 // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
+//
+// let book2 = {
+//     author: 'Joanne Rowling',
+//     name: 'Harry Potter',
+//     number: 245,
+//     genre: 'fantastic'
+// }
+// console.log(book2);
+
+
 // 4. Створити масив об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
+//
+// let books = [
+//     book1 = {
+//         author: 'Vasya',
+//         name: 'hope for faith',
+//         number: 142,
+//         genre: 'documentation'
+//     },
+//     book2 = {
+//         author: 'Joanne Rowling',
+//         name: 'Harry Potter',
+//         number: 245,
+//         genre: 'fantastic'
+//     }
+// ];
+// console.log(books[0]);
+// console.log(books[1]);
+
 // 5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
 // Значення площі зберігати в змінній s.
+//
+// let height = 23;
+// let width = 10;
+//
+// let s = height * width;
+// console.log(s);
+
+
 // 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
 // результат помістіть у змінну v.
+//
+// let heightC = 10;
+// let dC = 4;
+// let p = 3.14;
+// let r = dC / 2;
+// let pl = (r ** 2) * p;
+// let v = pl * heightC;
+//
+// console.log(v);
+
 // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
 // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
