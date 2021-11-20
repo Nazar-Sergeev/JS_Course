@@ -196,10 +196,18 @@
 //     i++;
 //
 // }
+// let i = numbers.length - 1;
+// while (i >= 0) {
+//     console.log(numbers[i])
+//     i--;
+// }
 
 //     2. перебрати його циклом for
 // for (let num of numbers) {
 //     console.log(num);
+// }
+// for (let i = numbers.length - 1; i >= 0; i--) {
+//     console.log(numbers[i])
 // }
 
 //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
@@ -224,8 +232,36 @@
 //         console.log(item);
 //     }
 // }
+
 // 5. перебрати циклом while та вивести  числа тільки парні  значення
+//
+// let i = 0;
+// while (i < numbers.length) {
+//     if (i % 2 === 0) {
+//         console.log(i)
+//     }
+//     i++;
+// }
+
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
+// for (let i = 0; i < numbers.length; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i)
+//     }
+// }
+
 // 7. замінити кожне число кратне 3 на слово "okten"
+// for (let number of numbers) {
+//     if (number % 3 === 0) {
+//         number = 'okten';
+//     }
+// }
+
 // 8. вивести масив в зворотньому порядку.
+// for (let i = numbers.length - 1; i >= 0; i--) {
+//     let number = numbers[i];
+//     console.log(number)
+// }
+
 // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+// Завдання зроблено, воно в рішеннях 1 та 2 завдання.
