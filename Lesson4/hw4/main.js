@@ -285,23 +285,24 @@
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-function foobar() {
-    let array = [{name: 'Dima', age: 13}, {model: 'Camry'}];
-    let newArr = [];
-    for (let i = 0; i < array.length; i++) {
-        let objectFromArr = array[i];
-        for (let item in objectFromArr) {
-            newArr[i] = item;
-        }
-    }
-    console.log(newArr);
-    return newArr
-}
-
-foobar();
-///////// не можу зрозуміти ні як, я неможу вятнути в новий масив "name". "age, model" прийшли. Поясніть будь ласка.)))
+// function foobar() {
+//     let array = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+//     let newArr = [];
+//     for (let i = 0; i < array.length; i++) {
+//         let objectFromArr = array[i];
+//         for (let item in objectFromArr) {
+//             newArr[i] = item;
+//         }
+//     }
+//     console.log(newArr);
+//     return newArr
+// }
+//
+// foobar();
+///////// не можу зрозуміти ні як, я неможу втянути в новий масив "name". "age, model" прийшли. Поясніть будь ласка.)))
 //
 //     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
 
