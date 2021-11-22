@@ -276,6 +276,7 @@
 //             }
 //         }
 //     }
+//     console.log(newArray)
 //     return newArray;
 // }
 //
@@ -285,24 +286,37 @@
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-// function foobar() {
-//     let array = [{name: 'Dima', age: 13}, {model: 'Camry'}];
-//     let newArr = [];
+// function foobar(array) {
+//     let newArray = [];
+//     let index = 0;
 //     for (let i = 0; i < array.length; i++) {
 //         let objectFromArr = array[i];
 //         for (let item in objectFromArr) {
-//             newArr[i] = item;
+//             newArray[index++] = item;
 //         }
 //     }
-//     console.log(newArr);
-//     return newArr
+//     console.log(newArray);
+//     return newArray
 // }
-//
-// foobar();
-///////// не можу зрозуміти ні як, я неможу втянути в новий масив "name". "age, model" прийшли. Поясніть будь ласка.)))
-//
+// foobar([{name: 'Dima', age: 13}, {model: 'Camry'}]);
+
+
 //     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+//
+// function foobar2(array) {
+//     let newArray = [];
+//     let index = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         let element =array[i];
+//         for (let item in element) {
+//             newArray[index++] = element[item]
+//         }
+//     }
+//     console.log(newArray);
+//     return newArray
+// }
+// foobar2([{name: 'Dima', age: 13}, {model: 'Camry'}]);
 
 
