@@ -133,13 +133,17 @@
 //         this.year = year;
 //         this.maxspeed = maxspeed;
 //         this.engine = engine;
-//         this.drive = () => console.log(`їдемо зі швидкістю ${this.maxspeed} на годину`);
-//         this.info = () => console.log(`${this.model} ${this.made} ${this.year} ${this.maxspeed} ${this.engine}`);
-//         this.increaseMaxSpeed = (newSpeed) => {
+//         this.drive = function (){
+//             console.log(`їдемо зі швидкістю ${this.maxspeed} на годину`);
+//         }
+//         this.info = function (){
+//         console.log(`${this.model} ${this.made} ${this.year} ${this.maxspeed} ${this.engine}`);
+//         }
+//         this.increaseMaxSpeed = function (newSpeed)  {
 //             let a = this.maxspeed + newSpeed;
 //             console.log(`Тепер їдемо зі швидкістю ${a}км на годину`);
 //         };
-//         this.changeYear = (newValue) => {
+//         this.changeYear = function (newValue) {
 //             this.year = newValue;
 //             console.log(`${this.year} new years!!!`)
 //         };

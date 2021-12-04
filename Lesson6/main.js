@@ -49,7 +49,7 @@
 // - Напишіть функцію stringToArray(str), яка перетворює рядок на масив слів.
 //
 // function stringToArray(str) {
-//     return str.split();
+//     return str.split(' ');
 // }
 //     let str = 'Каждый охотник желает знать';
 //     let arr = stringToArray(str);

@@ -13,7 +13,7 @@
 // c) робить шириниу всіх елементів з класом linkList шириною 50%
 // let elementsByClassName = document.getElementsByClassName('linkList');
 // for (const item of elementsByClassName) {
-//     item.style.width = '50 %';
+//     item.style.width = '50%';
 //    
 // }
 
