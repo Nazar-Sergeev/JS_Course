@@ -247,10 +247,14 @@ for (const user of usersList) {
 
     let address = document.createElement('ul');
     for (const item in user.address) {
+        if (typeof user.address[item] === 'object') {
+            break;
+        }
         let elementLi = document.createElement('li');
         elementLi.innerText = user.address[item]
         address.appendChild(elementLi);
     }
+    
 
 
     let ulGeo = document.createElement('ul');
