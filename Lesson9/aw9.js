@@ -255,8 +255,7 @@ for (const user of usersList) {
         address.appendChild(elementLi);
     }
     
-
-
+    
     let ulGeo = document.createElement('ul');
 
     for (const e in user.address.geo) {
