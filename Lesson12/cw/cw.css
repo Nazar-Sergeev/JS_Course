@@ -1,21 +1,17 @@
-
-.wrap{
+.wrap {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1470px;
 
 }
-.post,.comment{
+.post{
     width: 250px;
     margin: 10px;
     padding: 10px;
     border: 1px solid black;
 
-
 }
-
-.post h3 {
-    margin: 0;
+.comment {
+    text-shadow: 3px 5px 6px silver;
 }
-
-
