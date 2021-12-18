@@ -33,10 +33,16 @@ fetch('https://jsonplaceholder.typicode.com/comments')
         for (const comment of response) {
             let divComment = document.createElement('div');
             divComment.classList.add('comment');
-            divComment.innerHTML = `<h3>${comment.id}</h3> <h2>${comment.name}</h2> <h4>${comment.email}</h4> <p>${comment.body}</p>`
+            divComment.innerHTML = `
+            <h3>${comment.id}</h3> 
+            <h2>${comment.name}</h2> 
+            <h4>${comment.email}</h4> 
+            <p>${comment.body}</p>`
 
             div.appendChild(divComment)
             document.body.appendChild(div);
         }
 
     });
+
+
