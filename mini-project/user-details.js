@@ -74,8 +74,8 @@ for (const user of users) {
         fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
             .then(value => value.json())
             .then(posts => {
-                for (const postItem of posts) {
 
+                for (const postItem of posts) {
 
                     let divPost = document.createElement('div')
                     divPost.innerHTML = `ID: ${postItem.id} - <b>${postItem.title}</b>`
@@ -86,7 +86,17 @@ for (const user of users) {
 
                     divPostWrap.append(divPost, btnPost);
                 document.body.appendChild(divPostWrap)
+
+
+                localStorage.setItem('posts', JSON.stringify([]));
+                let postsJson = JSON.parse(localStorage.getItem('posts'))
+                postsJson.push(postItem);
+                localStorage.setItem('posts', JSON.stringify(postsJson))
+
+
+                    btn.disabled = true;
                 }
+
 
             });
     }
