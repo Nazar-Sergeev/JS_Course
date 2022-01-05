@@ -31,20 +31,20 @@ for (const user of users) {
         }
 
         let elementLi = document.createElement('li');
-        elementLi.innerHTML =`<b>${addressItem}</b>: ${infoAddress}`;
+        elementLi.innerHTML = `<b>${addressItem}</b>: ${infoAddress}`;
         address.appendChild(elementLi)
 
     }
 
     let geoUl = document.createElement('ul')
 
-for (const item in user.address.geo) {
-    let geoLi = document.createElement('li');
-    geoLi.innerText = `${item}: ${user.address.geo[item]}`
-    geoUl.appendChild(geoLi)
-}
+    for (const item in user.address.geo) {
+        let geoLi = document.createElement('li');
+        geoLi.innerText = `${item}: ${user.address.geo[item]}`
+        geoUl.appendChild(geoLi)
+    }
 
-address.appendChild(geoUl);
+    address.appendChild(geoUl);
 
 
     let divCompany = document.createElement('div');
@@ -64,11 +64,33 @@ address.appendChild(geoUl);
     }
 
     document.body.append(divUser, divInfo, divAddress, divCompany);
-}
 
-let btn = document.createElement('button');
-btn.innerText = 'post of current user';
+    let btn = document.createElement('button');
+    btn.innerText = 'post of current user';
 
+    let divPostWrap = document.createElement('div');
+
+    btn.onclick = () => {
+        fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+            .then(value => value.json())
+            .then(posts => {
+                for (const postItem of posts) {
+
+
+                    let divPost = document.createElement('div')
+                    divPost.innerHTML = `ID: ${postItem.id} - <b>${postItem.title}</b>`
+
+                    let btnPost = document.createElement('a')
+                    btnPost.setAttribute('href', 'post-details.html')
+                    btnPost.innerText = 'post-details';
+
+                    divPostWrap.append(divPost, btnPost);
+                document.body.appendChild(divPostWrap)
+                }
+
+            });
+    }
 
 document.body.appendChild(btn);
+}
 
