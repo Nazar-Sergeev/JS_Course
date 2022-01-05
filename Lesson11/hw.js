@@ -1,32 +1,32 @@
 //-створити форму з інпутами для name та age.
 //При відправці форми записати об'єкт в localstorage
-// let form = document.createElement('form');
-//
-// let name = document.createElement('input');
-// name.setAttribute('name', 'name');
-//
-// let age = document.createElement('input');
-// age.setAttribute('name', 'age');
-// age.setAttribute('type', 'number');
-//
-// let btn = document.createElement('button');
-// btn.innerText = 'Enter';
-//
-// form.append(name, age, btn);
-// document.body.appendChild(form);
-//
-//
-// let save = (userName, userAge) => {
-//     let user = {
-//         name: userName,
-//         age: userAge
-//     }
-//     localStorage.setItem('key', JSON.stringify(user));
-// };
-//
-// btn.addEventListener('click', function () {
-//     save(name.value, age.value);
-// });
+let form = document.createElement('form');
+
+let name = document.createElement('input');
+name.setAttribute('name', 'name');
+
+let age = document.createElement('input');
+age.setAttribute('name', 'age');
+age.setAttribute('type', 'number');
+
+let btn = document.createElement('button');
+btn.innerText = 'Enter';
+
+form.append(name, age, btn);
+document.body.appendChild(form);
+
+
+let save = (userName, userAge) => {
+    let user = {
+        name: userName,
+        age: userAge
+    }
+    localStorage.setItem('key', JSON.stringify(user));
+};
+
+btn.addEventListener('click', function () {
+    save(name.value, age.value);
+});
 
 
 // -створити форму з інпутами для model,type та volume автівки.
