@@ -15,8 +15,18 @@ for (const post of posts) {
     
 fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
     .then(value => value.json())
-    .then(response => {
-    console.log(response)
+    .then(comments => {
+        let divCommentsWrap = document.createElement('div');
+        divCommentsWrap.innerHTML = `<h3>Comments</h3>`
+
+        for (const commentElement of comments) {
+            let divComment = document.createElement('div');
+            divComment.innerText = `${commentElement.id} - ${commentElement.name}`;
+
+            divCommentsWrap.appendChild(divComment)
+
+        }
+        document.body.appendChild(divCommentsWrap);
     });
 
 }
