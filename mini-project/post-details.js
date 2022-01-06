@@ -1,6 +1,7 @@
 
+
 let posts = JSON.parse(localStorage.getItem('posts'));
-// console.log(posts)
+
     let postWrap = document.createElement('div');
 for (const post of posts) {
     let divPost = document.createElement('div');
