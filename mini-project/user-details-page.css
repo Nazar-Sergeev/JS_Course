@@ -1,0 +1,29 @@
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    width: 90%;
+    height: 50px;
+    font-size: xx-large;
+}
+
+
+.posts-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+
+.post-block {
+    width: 220px;
+    margin-bottom: 20px;
+    border: solid 1px black;
+    padding: 10px;
+    box-sizing: border-box;
+}
