@@ -65,26 +65,37 @@ for (const user of users) {
 
     document.body.append(divUser, divInfo, divAddress, divCompany);
 
+    let divBtn = document.createElement('div')
+    divBtn.classList.add('btn-wrap');
+
     let btn = document.createElement('button');
     btn.innerText = 'post of current user';
+    btn.classList.add('btn')
 
-    let divPostWrap = document.createElement('div');
+    divBtn.appendChild(btn)
+
+
 
     btn.onclick = () => {
         fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
             .then(value => value.json())
             .then(posts => {
 
+    let divPostWrap = document.createElement('div');
+    divPostWrap.classList.add('posts-wrap')
+
                 for (const postItem of posts) {
 
                     let divPost = document.createElement('div')
-                    divPost.innerHTML = `ID: ${postItem.id} - <b>${postItem.title}</b>`
+                    divPost.innerHTML = `ID: ${postItem.id} - <b>${postItem.title}</b></br>`
+                    divPost.classList.add('post-block')
 
                     let btnPost = document.createElement('a')
                     btnPost.setAttribute('href', 'post-details.html')
                     btnPost.innerText = 'post-details';
+                    divPost.appendChild(btnPost);
 
-                    divPostWrap.append(divPost, btnPost);
+                    divPostWrap.appendChild(divPost);
                 document.body.appendChild(divPostWrap)
 
 
@@ -101,6 +112,6 @@ for (const user of users) {
             });
     }
 
-document.body.appendChild(btn);
+document.body.appendChild(divBtn);
 }
 
